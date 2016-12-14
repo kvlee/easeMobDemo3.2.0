@@ -34,8 +34,7 @@ public class EaseLoadLocalBigImgTask extends AsyncTask<Void, Void, Bitmap> {
 	private int height;
 	private Context context;
 
-	public EaseLoadLocalBigImgTask(Context context,String path, EasePhotoView photoView,
-			ProgressBar pb, int width, int height) {
+	public EaseLoadLocalBigImgTask(Context context,String path, EasePhotoView photoView,ProgressBar pb, int width, int height) {
 		this.context = context;
 		this.path = path;
 		this.photoView = photoView;
@@ -72,8 +71,7 @@ public class EaseLoadLocalBigImgTask extends AsyncTask<Void, Void, Bitmap> {
 		if (result != null)
 			EaseImageCache.getInstance().put(path, result);
 		else
-			result = BitmapFactory.decodeResource(context.getResources(),
-					R.drawable.ease_default_image);
+			result = BitmapFactory.decodeResource(context.getResources(),R.drawable.ease_default_image);
 		photoView.setImageBitmap(result);
 	}
 }
